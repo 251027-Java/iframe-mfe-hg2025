@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: sans-serif; background-color: #fff0f0; padding: 20px; border: 2px dashed #f44336;">
+    <h3>App 2: Dashboard</h3>
+    <p>This page has now sucessfully loaded.</p>
+
+    <button onclick="resetShellColor()" style="padding: 10px; cursor: pointer;">
+        Reset Shell Color
+    </button>
+
+    <script>
+        function resetShellColor() {
+            window.parent.postMessage({
+                type: "CHANGE_SHELL_COLOR",
+                color: "#eee" 
+            }, "*");
+        }
+    </script>
+</body>
+</html>

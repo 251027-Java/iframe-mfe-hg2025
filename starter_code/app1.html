@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: sans-serif; background-color: #f0f8ff; padding: 20px; border: 2px dashed #2196f3;">
+    <h3>App 1: Color Controller</h3> 
+    <p>This page is running inside an iFrame.</p>
+    
+    <button onclick="sendColorChange()" style="padding: 10px; cursor: pointer;" >
+        Change Shell Color to Orange
+    </button>
+
+    <script>
+        function sendColorChange() {
+            window.parent.postMessage({
+                type: "CHANGE_SHELL_COLOR",
+                color: "#ffcc80"
+            }, "*"); 
+        }
+    </script>
+</body>
+</html>
